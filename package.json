@@ -1,6 +1,6 @@
 {
   "name": "skydeeta-portfolio",
-  "homepage": "https://Tharindu-Lakshan-Dev.github.io/skyDeeta/",
+  "homepage": "https://Tharindu-Lakshan-Dev.github.io/skyDeeta/home",
   "private": true,
   "version": "0.1.0",
   "type": "module",
@@ -8,7 +8,11 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy":"npm run build",
+    "deploy":"gh-pages -d dist"
+
+
   },
   "dependencies": {
     "@react-three/drei": "^9.102.3",
