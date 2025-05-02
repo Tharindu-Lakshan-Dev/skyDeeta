@@ -6,8 +6,8 @@ import About from './pages/About'
 import Services from './pages/Services'
 import Portfolio from './pages/Portfolio'
 import Contact from './pages/Contact'
-import NotFound from './pages/NotFound'
 import CustomCursor from './components/ui/CustomCursor'
+import BackToTop from './components/ui/Backtotop'
 
 function App() {
   const location = useLocation()
@@ -30,7 +30,7 @@ function App() {
           <Route path="contact" element={<Contact />} />
         </Route>
       </Routes>
-
+    <BackToTop />
     </>
   )
 }
