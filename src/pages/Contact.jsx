@@ -334,7 +334,7 @@ const Contact = () => {
               <p className="text-secondary-gray dark:text-accent-silver mb-4">
                 Still have questions? Feel free to reach out to us directly.
               </p>
-              <Button to="#" variant="outline">
+              <Button to="/error" variant="outline">
                 View All FAQs
               </Button>
             </div>

@@ -24,7 +24,7 @@ const NotFound = () => {
           </p>
           
           <div className="flex flex-wrap justify-center gap-4">
-            <Button to="/" size="large">
+            <Button to="*" size="large">
               Return Home
             </Button>
             
