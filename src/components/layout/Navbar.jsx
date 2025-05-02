@@ -11,7 +11,7 @@ const Navbar = () => {
   const { theme, toggleTheme } = useTheme()
   
   const navItems = [
-    { name: 'Home', path: '/' },
+    { name: 'Home', path: '/*' },
     { name: 'About', path: '/about' },
     { name: 'Services', path: '/services' },
     { name: 'Portfolio', path: '/portfolio' },
