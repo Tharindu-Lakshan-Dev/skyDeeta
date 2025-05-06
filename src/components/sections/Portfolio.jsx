@@ -2,9 +2,10 @@ import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import SectionHeader from '../ui/SectionHeader'
 import Button from '../ui/Button'
-import freelancer from "../../assets/freelancer.jpg"
-import job from "../../assets/images.png";
-import trader from "../../assets/trader.avif";
+import WorkzHub from "../../assets/WorkzHub.png"
+import Fxsam from "../../assets/httpfxsam.png";
+import Job from "../../assets/images.png"
+
 
 const Portfolio = () => {
   const containerRef = useRef(null)
@@ -14,21 +15,25 @@ const Portfolio = () => {
     {
       title: 'Freelancing Platform',
       category: 'Web Development',
-      image: freelancer,
-      description: 'freelancing site..caption test.',
+      image: WorkzHub,
+      description: 'WorkerzHub is a dynamic platform that connects skilled workers with employers, offering efficient hiring solutions and job opportunities across various industries. It streamlines workforce management through user-friendly tools, making recruitment faster and more reliable..',
+      href:"http://workerzhub.com",
     },
     {
-      title: 'Job searching Platform',
-      category: 'Mobile Development',
-      image: job,
-      description: 'Jos finding website testing caption .',
+      title: 'Currency Trading',
+      category: 'Web Development',
+      image: Fxsam,
+      description: 'FXSam is a comprehensive online platform offering forex trading tools, educational resources, and market analysis to help traders make informed decisions. It empowers both beginners and professionals with real-time data and strategic insights for successful currency trading.',
+      href:"http://fxsam.com",
     },
     {
-      title: 'Trading Site',
+      title: 'Finding Jobs',
       category: 'Custom Software',
-      image: trader,
-      description: 'Real-time financial analytics dashboard with customizable reporting, Trading Platform caption test Test .',
+      image: Job,
+      description: 'Waiting for the information .',
+      href:"http://jobhelp.lk",
     },
+    
   ]
   
   const cardVariants = {
@@ -71,6 +76,7 @@ const Portfolio = () => {
                   alt={project.title}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
+
                 <div className="absolute inset-0 bg-gradient-to-t from-secondary-charcoal/80 to-transparent opacity-70"></div>
                 <div className="absolute bottom-4 left-4 right-4">
                   <span className="inline-block px-3 py-1 text-xs font-medium bg-primary-electric text-white rounded-full mb-2">
@@ -87,13 +93,13 @@ const Portfolio = () => {
                   {project.description}
                 </p>
                 
-                <Button 
-                  to={`/portfolio/${project.title.toLowerCase().replace(/\s+/g, '-')}`}
-                  variant="ghost"
-                  size="small"
+                <a 
+                  href={project.href}
+                  target='_blank'
+                  className='text-primary-electric pt-7'
                 >
                   View Case Study
-                </Button>
+                </a>
               </div>
             </motion.div>
           ))}
